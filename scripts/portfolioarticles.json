@@ -1,0 +1,41 @@
+[
+    {
+        "date": "2017-2019",
+        "title": "Musical works",
+        "summary": "I finished various musical works.",
+        "link": "https://soundcloud.com/0xf05f41/sets/works",
+        "linktext": "Listen to them here."
+    },
+
+    {
+        "date": "16th of June 2018",
+        "title": "Report on cheating",
+        "summary": "I wrote up a report on cheating in the video game Dirty Bomb by Splash Damage.",
+        "link": "documents/cheating.pdf",
+        "linktext": "You can read the report here."
+    },
+
+    {
+        "date": "2nd of Juli 2018",
+        "title": "CS:GO Cheat",
+        "summary": "I made a cheat for the game Counter Strike Global Offensive in AutoHotKey, a language that is usually intended for making macros.",
+        "link": "https://www.unknowncheats.me/forum/cs-go-releases/288317-passive-agressive-ahk-project.html",
+        "linktext": "You can find the cheat here."
+    },
+
+    {
+        "date": "3rd of April 2020",
+        "title": "Personal Website",
+        "summary": "I finished this absolutely awesome cool super duper website!",
+        "link": "",
+        "linktext": ""
+    },
+
+    {
+        "date": "9th of april 2020",
+        "title": "Energy Switcher",
+        "summary": "Energy Switcher is an educational game about sustainability in which the player manages a small island.",
+        "link": "resources/energyswitcher/index.html",
+        "linktext": "Play the online demo here."
+    }
+]

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stupid++</title>
+    <link rel="icon" href="images/icon.png">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="scripts/main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+  </head>
+
+    <body onload="showImage(0)">
+        <ul>
+            <li><a href="index.html">Stupid++</a></li>
+            <li onclick="toggleDropdown()" class="dropdown">
+              <a id="dropButton" href="javascript:void(0)" class="dropbtn">▼</a>
+            </li>
+          </ul>
+          <div id="mainDropdown" class="dropdown-content">
+            <a href="portfolio.html">- Portfolio</a>
+            <a href="gamedev.html">- Gamedev Tools</a>
+          </div>
+
+          <div class="main-grid-container">
+            <div class="pictureframe">
+                <img src="images/me.png" class="slide"> 
+                <img src="images/programming.png" class="slide">
+                <img src="images/gamedev.gif" class="slide">
+                <img src="images/sound.png" class="slide">
+                <img src="images/more.gif" class="slide">
+                <h1>Hey I'm Pelle</h1>
+            </div>
+            <div class="text-container">
+                I do cool things like 
+                <span class="highlight" onclick="showImage(1)" href="javascript:void(0)">Programming</span>,
+                <span class="highlight" onclick="showImage(2)" href="javascript:void(0)">Game development</span>,
+                <span class="highlight" onclick="showImage(3)">Sound design</span> and
+                <span class="highlight" onclick="showImage(4)">More</span>.
+                This website is a storage for all things cool I do. 
+            </div>
+            <div class="gridfooter">
+                    <span class="highlight">Looking for a coder?:</span><br>
+                    +31 0644354294<br>
+                    stupidplusplus@gmail.com<br>
+                    @stupidplusplus on Instagram<br>
+                    Based in Groningen, the Netherlands
+            </div>  
+          </div>
+    </body>
+</html>

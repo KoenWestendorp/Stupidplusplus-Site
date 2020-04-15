@@ -1,0 +1,350 @@
+:root {
+  /*Colors*/
+  --highlightcol: #1DD3B0;
+  --bgcol: #f0f0f0;
+  --darkcol: #494949;
+  --dropcol_1: #dfdfdf;
+  --dropcol_2: #ffffff;
+  --fontcol_1: #161616;
+  --fontcol_2: #fafafa;
+
+  /*Other shit*/
+  --borderradius: 25px;
+}
+
+
+/*If you don't use this scroll behavior I will shank you*/
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--bgcol);
+  margin: 1vw 1vw 0 1vw;
+  font-size: 30pt;
+  color: var(--fontcol_1);
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 40pt;
+  margin: 0.5vw;
+}
+
+p{
+  margin: 0;
+}
+
+.highlight {
+  background-color: var(--highlightcol);
+  font-style: italic;
+  user-select: none;
+  cursor: pointer;
+  color: var(--fontcol_1);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.spacing {
+  margin-top: 10vw;
+}
+
+/*Dropdown stuff*/
+
+ul {
+  position: relative;
+  z-index: 100;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--bgcol);
+  border-radius: var(--borderradius);
+  box-shadow:  5px 5px 10px var(--dropcol_1), 
+               -5px -5px 10px var(--dropcol_2);
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 75pt;
+}
+
+li.dropdown {
+  float: right;
+  background-color: var(--highlightcol);
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.dropbtn{
+  transform: rotate(-90deg);
+  transition: transform 0.5s ease-in-out;
+  font-style: normal;
+}
+
+.dropdown-content {
+  font-size: 35px;
+  color: var(--fontcol_1);
+  display: block;
+  position: absolute;
+  background-color: #fafafa86;
+  backdrop-filter: blur(10px);
+  left: 0;
+  margin: 0vw 1vw 1vw 1vw;
+  min-width: 98vw;
+  font-size: 75pt;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, box-shadow 1s ease-in-out;
+  pointer-events: none;
+  border-radius: var(--borderradius);
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/*Image slideshow stuff*/
+
+.slide {
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  pointer-events: none;
+  display: none;
+}
+
+.show {opacity: 1; pointer-events: auto; display: block;}
+.rotate {transform: rotate(0deg);}
+
+/*Grid stuff*/
+
+.main-grid-container {
+  display: grid;
+  grid-template-areas:
+    'main'
+    'description'
+    'footer';
+  grid-gap: 10px;
+  padding: 10px 0px 0px 0px;
+}
+
+.main-grid-container > div {
+  overflow: hidden;
+}
+
+.gridfooter{
+  position: relative;
+  z-index: 100;
+  background-color: var(--darkcol);
+  color: var(--fontcol_2);
+  font-size: 30pt;
+  text-align: left;
+  margin: 1vw -1vw 0 -1vw;
+  grid-area: footer;
+}
+
+.text-container{
+  padding: 10px;
+  font-size: 25pt;
+  border-radius: var(--borderradius);
+  grid-area: description;
+  object-fit: fill;
+  background-color: var(--bgcol);
+  box-shadow:  5px 5px 10px var(--dropcol_1), 
+  -5px -5px 10px var(--dropcol_2);
+}
+
+.pictureframe{
+  background-color: var(--bgcol);
+  text-align: center;
+  border-radius: var(--borderradius);
+  font-size: 35pt;
+  grid-area: main;
+  box-shadow:  5px 5px 10px var(--dropcol_1), 
+  -5px -5px 10px var(--dropcol_2);
+}
+
+.txt-img {
+  margin: 0vw;
+  width: 100%;
+  pointer-events: none;
+}
+
+/*Timeline and stuff*/
+
+.timeline {
+  position: relative;
+  padding: 10px 10px 10px 50px;
+  margin: 0 1vw 1vw 0;
+}
+
+.container {
+  padding: 10px 10px 10px 10px;
+  margin: 1vw;
+  border-radius: var(--borderradius);
+  background: var(--bgcol);
+  box-shadow:  5px 5px 10px var(--dropcol_1), 
+               -5px -5px 10px var(--dropcol_2);
+}
+
+.generator > .container {
+  margin: 1vw -2vw 1vw -2vw;
+}
+
+.content {
+  margin: 0;
+  user-select: none;
+}
+
+.timeline::before {
+  margin: 1vw 0 0 0;
+  content: '';
+  width: 25px;
+  border-radius: var(--borderradius);
+  background: var(--highlightcol);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+}
+
+
+
+/*Game idea generator*/
+
+.generator {
+  position: relative;
+  padding: 10px 10px 10px 50px;
+  margin: 0 1vw 1vw 0;
+}
+
+.genre-container {
+  margin: 1vw;
+  border-radius: var(--borderradius);
+  background: var(--bgcol);
+  box-shadow:  5px 5px 10px var(--dropcol_1), 
+               -5px -5px 10px var(--dropcol_2); 
+  overflow: auto;
+}
+
+
+
+.centertext {
+  text-align: center;
+}
+
+.genre {
+  text-align: center;
+  font-size: 8vw;
+  margin-top: auto;
+}
+
+.toggle {
+  user-select: none;
+  margin: 2vw;
+  padding: 3vw;
+  font-size: 5vw;
+  float: left;
+  border-radius: var(--borderradius);
+}
+
+.on {
+  box-shadow: inset 5px 5px 10px var(--dropcol_1), 
+              inset -5px -5px 10px var(--dropcol_2);
+}
+
+.off {
+  box-shadow:  5px 5px 10px var(--dropcol_1), 
+               -5px -5px 10px var(--dropcol_2);
+}
+
+.left {
+  float: left;
+}
+
+/*Queries*/
+  @media (min-aspect-ratio: 1/1) {
+
+    .dropdown-content {
+      font-size: 80px;
+    }
+    .main-grid-container {
+      display: grid;
+      grid-template-areas:
+        'main description description'
+        'footer footer footer';
+      grid-gap: 10px;
+      padding: 10px 0px 0px 0px;
+    }
+    
+    .text-container{
+      padding: 10px;
+      font-size: 25pt;
+      border-radius: var(--borderradius);
+    }
+    
+    .pictureframe{
+      background-color: var(--bgcol);
+      text-align: center;
+      border-radius: var(--borderradius);
+      font-size: 15pt;
+    }
+    
+    li a, .dropbtn {
+      display: inline-block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 25pt;
+    }
+
+    .text-container {
+      font-size: 4.5vw;
+    }
+
+    .container {
+      overflow: hidden;
+    }
+
+    .txt-img {
+      width: 35%;
+      float: left;
+    }
+
+    .genre {
+      font-size: 4vw;
+    }
+    
+    .toggle {
+      margin: 0.5vw;
+      padding: 1vw;
+      font-size: 2vw;
+    }
+}
