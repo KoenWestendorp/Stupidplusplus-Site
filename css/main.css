@@ -238,6 +238,19 @@ li.dropdown {
 	margin: 0;
 }
 
+.timeline::before {
+	margin: 1em 0 0 0;
+	content: '';
+	width: 1.5em;
+	height: calc(100% - 4em);
+	border-radius: var(--borderradius);
+	background: var(--highlightcol);
+	position: absolute;
+	top: 1em;
+	bottom: 0;
+	left: 1em;
+}
+
 .container {
 	font-size: 1em;
 	padding: 2em;
@@ -257,18 +270,7 @@ li.dropdown {
 	user-select: none;
 }
 
-.timeline::before {
-	margin: 1em 0 0 0;
-	content: '';
-	width: 1.5em;
-	height: calc(100% - 4em);
-	border-radius: var(--borderradius);
-	background: var(--highlightcol);
-	position: absolute;
-	top: 1em;
-	bottom: 0;
-	left: 1em;
-}
+
 
 
 
