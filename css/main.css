@@ -1,143 +1,166 @@
 :root {
-  /*Colors*/
-  --highlightcol: #1DD3B0;
-  --bgcol: #f0f0f0;
-  --darkcol: #494949;
-  --dropcol_1: #dfdfdf;
-  --dropcol_2: #ffffff;
-  --fontcol_1: #161616;
-  --fontcol_2: #fafafa;
+	/*Colors*/
+	--highlightcol: #1DD3B0;
+	--bgcol: #f0f0f0;
+	--darkcol: #494949;
+	--dropcol_1: #dfdfdf;
+	--dropcol_2: #ffffff;
+	--fontcol_1: #161616;
+	--fontcol_2: #fafafa;
 
-  /*Other shit*/
-  --borderradius: 25px;
+	/*Other shit*/
+	--borderradius: 1em;
 }
 
 
 /*If you don't use this scroll behavior I will shank you*/
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
-  font-family: 'Roboto Mono', monospace;
-  background-color: var(--bgcol);
-  margin: 1vw 1vw 0 1vw;
-  font-size: 30pt;
-  color: var(--fontcol_1);
+	font-family: 'Roboto Mono', monospace;
+	background-color: var(--bgcol);
+	margin: 0;
+	font-size: 16pt;
+	color: var(--fontcol_1);
+
+	min-height: 100vh;
 }
 
 .example::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
-h1{
-  font-family: 'Montserrat', sans-serif;
-  font-style: italic;
+.flex-hor {
+	display: flex; 
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+h1, h2{
+	font-family: 'Montserrat', sans-serif;
+	font-style: italic;
 }
 
 h2{
-  font-family: 'Montserrat', sans-serif;
-  font-style: italic;
-  font-weight: lighter;
-  font-size: 40pt;
-  margin: 0.5vw;
+	font-weight: lighter;
+	font-size: 40pt;
+	margin: 0.5vw;
+}
+
+h3 {
+	margin-top: 0;
 }
 
 p{
-  margin: 0;
+	margin: 0;
+}
+
+header {
+	margin: 1em;
+	margin-bottom: 0;
 }
 
 .highlight {
-  background-color: var(--highlightcol);
-  font-style: italic;
-  user-select: none;
-  cursor: pointer;
-  color: var(--fontcol_1);
+	background-color: var(--highlightcol);
+	font-style: italic;
+	user-select: none;
+	cursor: pointer;
+	color: var(--fontcol_1);
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: underline;
+	color: inherit;
 }
 
 .spacing {
-  margin-top: 10vw;
+	margin-top: 10vw;
 }
 
 /*Dropdown stuff*/
 
 ul {
-  position: relative;
-  z-index: 100;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: var(--bgcol);
-  border-radius: var(--borderradius);
-  box-shadow:  5px 5px 10px var(--dropcol_1), 
-               -5px -5px 10px var(--dropcol_2);
+	position: relative;
+	z-index: 100;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: var(--bgcol);
+	border-radius: var(--borderradius);
+	box-shadow:  5px 5px 10px var(--dropcol_1), 
+	-5px -5px 10px var(--dropcol_2);
 }
 
 li {
-  float: left;
+	float: left;
 }
 
 li a, .dropbtn {
-  display: inline-block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 75pt;
+	display: inline-block;
+	text-align: center;
+	padding: 1em;
+	text-decoration: none;
+	font-size: 1em;
 }
 
 li.dropdown {
-  float: right;
-  background-color: var(--highlightcol);
-  font-weight: bolder;
-  font-style: italic;
+	float: right;
+	background-color: var(--highlightcol);
+	font-weight: bolder;
+	font-style: italic;
 }
 
 .dropbtn{
-  transform: rotate(-90deg);
-  transition: transform 0.5s ease-in-out;
-  font-style: normal;
+	transform: rotate(-90deg);
+	transition: transform 0.2s ease-in-out;
+	font-style: normal;
 }
 
 .dropdown-content {
-  font-size: 35px;
-  color: var(--fontcol_1);
-  display: block;
-  position: absolute;
-  background-color: #fafafa86;
-  backdrop-filter: blur(10px);
-  left: 0;
-  margin: 0vw 1vw 1vw 1vw;
-  min-width: 98vw;
-  font-size: 75pt;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 1s ease-in-out, box-shadow 1s ease-in-out;
-  pointer-events: none;
-  border-radius: var(--borderradius);
+	color: var(--fontcol_1);
+	display: block;
+	position: absolute;
+	background-color: #fafafaee;
+	backdrop-filter: blur(16px);
+	left: 0;
+	margin: 1em;
+	/* margin-top: 0; */
+	padding: 1em;
+	padding-right: 0;
+	/* min-width: 98vw; */
+	width: calc(100% - 3 * 1em);
+	font-size: 1em;
+	z-index: 2;
+	opacity: 0;
+	transition: 
+		opacity 0.2s ease-in-out, 
+		box-shadow 0.2s ease-in-out;
+	pointer-events: none;
+	border-radius: var(--borderradius);
 }
 
 .dropdown-content a {
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:first-child {
+	padding-bottom: 1em;
 }
 
 /*Image slideshow stuff*/
 
 .slide {
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.25s ease-in-out;
-  pointer-events: none;
-  display: none;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 0.25s ease-in-out;
+	pointer-events: none;
+	display: none;
 }
 
 .show {opacity: 1; pointer-events: auto; display: block;}
@@ -146,93 +169,105 @@ li.dropdown {
 /*Grid stuff*/
 
 .main-grid-container {
-  display: grid;
-  grid-template-areas:
-    'main'
-    'description'
-    'footer';
-  grid-gap: 10px;
-  padding: 10px 0px 0px 0px;
+	display: grid;
+	grid-template-areas:
+	'main'
+	'description'
+	'footer';
+	/* grid-gap: 1em; */
+	padding: 0;
+	padding-top: 1em;
 }
 
 .main-grid-container > div {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .gridfooter{
-  position: relative;
-  z-index: 100;
-  background-color: var(--darkcol);
-  color: var(--fontcol_2);
-  font-size: 30pt;
-  text-align: left;
-  margin: 1vw -1vw 0 -1vw;
-  grid-area: footer;
+	position: relative;
+	z-index: 100;
+	background-color: var(--darkcol);
+	color: var(--fontcol_2);
+	font-size: 1em;
+	text-align: left;
+	margin-top: 1em;
+	grid-area: footer;
+	padding: 1em;
+	/* width: 100vw; */
 }
 
 .text-container{
-  padding: 10px;
-  font-size: 25pt;
-  border-radius: var(--borderradius);
-  grid-area: description;
-  object-fit: fill;
-  background-color: var(--bgcol);
-  box-shadow:  5px 5px 10px var(--dropcol_1), 
-  -5px -5px 10px var(--dropcol_2);
+	padding: 1em;
+	font-size: 1em;
+	border-radius: var(--borderradius);
+	grid-area: description;
+	object-fit: fill;
+	background-color: var(--bgcol);
+	box-shadow:  5px 5px 10px var(--dropcol_1), 
+	-5px -5px 10px var(--dropcol_2);
 }
 
 .pictureframe{
-  background-color: var(--bgcol);
-  text-align: center;
-  border-radius: var(--borderradius);
-  font-size: 35pt;
-  grid-area: main;
-  box-shadow:  5px 5px 10px var(--dropcol_1), 
-  -5px -5px 10px var(--dropcol_2);
+	background-color: var(--bgcol);
+	text-align: center;
+	border-radius: var(--borderradius);
+	font-size: 1em;
+	margin: 1em;
+	grid-area: main;
+	box-shadow:  5px 5px 10px var(--dropcol_1), 
+	-5px -5px 10px var(--dropcol_2);
+}
+
+.pictureframe h1 {
+	padding: 0 .5em;
 }
 
 .txt-img {
-  margin: 0vw;
-  width: 100%;
-  pointer-events: none;
+	margin-bottom: 1em;
+	margin-top: 0.5em;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
 }
 
 /*Timeline and stuff*/
 
 .timeline {
-  position: relative;
-  padding: 10px 10px 10px 50px;
-  margin: 0 1vw 1vw 0;
+	position: relative;
+	padding: 1em 1em 1em 3em;
+	margin: 0 1vw 1vw 0;
 }
 
 .container {
-  padding: 10px 10px 10px 10px;
-  margin: 1vw;
-  border-radius: var(--borderradius);
-  background: var(--bgcol);
-  box-shadow:  5px 5px 10px var(--dropcol_1), 
-               -5px -5px 10px var(--dropcol_2);
+	font-size: 1em;
+	padding: 2em;
+	margin: 1em;
+	border-radius: var(--borderradius);
+	background: var(--bgcol);
+	box-shadow:  5px 5px 10px var(--dropcol_1), 
+	-5px -5px 10px var(--dropcol_2);
 }
 
 .generator > .container {
-  margin: 1vw -2vw 1vw -2vw;
+	margin: 1vw -2vw 1vw -2vw;
 }
 
 .content {
-  margin: 0;
-  user-select: none;
+	margin: 0;
+	user-select: none;
 }
 
 .timeline::before {
-  margin: 1vw 0 0 0;
-  content: '';
-  width: 25px;
-  border-radius: var(--borderradius);
-  background: var(--highlightcol);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 15px;
+	margin: 1em 0 0 0;
+	content: '';
+	width: 1.5em;
+	height: calc(100% - 4em);
+	border-radius: var(--borderradius);
+	background: var(--highlightcol);
+	position: absolute;
+	top: 1em;
+	bottom: 0;
+	left: 1em;
 }
 
 
@@ -240,111 +275,119 @@ li.dropdown {
 /*Game idea generator*/
 
 .generator {
-  position: relative;
-  padding: 10px 10px 10px 50px;
-  margin: 0 1vw 1vw 0;
+	position: relative;
+	padding: 10px 10px 10px 50px;
+	margin: 0 1vw 1vw 0;
 }
 
 .genre-container {
-  margin: 1vw;
-  border-radius: var(--borderradius);
-  background: var(--bgcol);
-  box-shadow:  5px 5px 10px var(--dropcol_1), 
-               -5px -5px 10px var(--dropcol_2); 
-  overflow: auto;
+	margin: 1vw;
+	border-radius: var(--borderradius);
+	background: var(--bgcol);
+	box-shadow:  5px 5px 10px var(--dropcol_1), 
+	-5px -5px 10px var(--dropcol_2); 
+	overflow: auto;
 }
 
 
 
 .centertext {
-  text-align: center;
+	text-align: center;
 }
 
 .genre {
-  text-align: center;
-  font-size: 8vw;
-  margin-top: auto;
+	text-align: center;
+	font-size: 8vw;
+	margin-top: auto;
 }
 
 .toggle {
-  user-select: none;
-  margin: 2vw;
-  padding: 3vw;
-  font-size: 5vw;
-  float: left;
-  border-radius: var(--borderradius);
+	user-select: none;
+	margin: 2vw;
+	padding: 3vw;
+	font-size: 5vw;
+	float: left;
+	border-radius: var(--borderradius);
 }
 
 .on {
-  box-shadow: inset 5px 5px 10px var(--dropcol_1), 
-              inset -5px -5px 10px var(--dropcol_2);
+	box-shadow: inset 5px 5px 10px var(--dropcol_1), 
+	inset -5px -5px 10px var(--dropcol_2);
 }
 
 .off {
-  box-shadow:  5px 5px 10px var(--dropcol_1), 
-               -5px -5px 10px var(--dropcol_2);
+	box-shadow:  5px 5px 10px var(--dropcol_1), 
+	-5px -5px 10px var(--dropcol_2);
 }
 
 .left {
-  float: left;
+	float: left;
 }
 
 /*Queries*/
-  @media (min-aspect-ratio: 1/1) {
+@media (min-aspect-ratio: 1/1) {
+	.flex-hor {
+		flex-direction: row;
+	}
 
-    .dropdown-content {
-      font-size: 80px;
-    }
-    .main-grid-container {
-      display: grid;
-      grid-template-areas:
-        'main description description'
-        'footer footer footer';
-      grid-gap: 10px;
-      padding: 10px 0px 0px 0px;
-    }
-    
-    .text-container{
-      padding: 10px;
-      font-size: 25pt;
-      border-radius: var(--borderradius);
-    }
-    
-    .pictureframe{
-      background-color: var(--bgcol);
-      text-align: center;
-      border-radius: var(--borderradius);
-      font-size: 15pt;
-    }
-    
-    li a, .dropbtn {
-      display: inline-block;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 25pt;
-    }
+	.dropdown-content {
+		font-size: 1em;
+	}
+	.main-grid-container {
+		display: grid;
+		grid-template-areas:
+		'main description description'
+		'footer footer footer';
+		/* grid-gap: 1em; */
+		/* padding: 1em 0px 0px 0px; */
+	}
+	
+	.text-container{
+		padding: 2em;
+		font-size: 1em;
+		border-radius: var(--borderradius);
+	}
 
-    .text-container {
-      font-size: 4.5vw;
-    }
+	.text-container p {
+		font-size: 1em;
+	}
+	
+	.pictureframe{
+		background-color: var(--bgcol);
+		text-align: center;
+		border-radius: var(--borderradius);
+		/* font-size: 1em; */
+	}
+	
+	li a, .dropbtn {
+		display: inline-block;
+		text-align: center;
+		padding: .75em 1em;
+		text-decoration: none;
+		font-size: 1em;
+	}
 
-    .container {
-      overflow: hidden;
-    }
+/* 	.text-container {
+		font-size: 2em;
+	} */
 
-    .txt-img {
-      width: 35%;
-      float: left;
-    }
+	.container {
+		overflow: hidden;
+	}
 
-    .genre {
-      font-size: 4vw;
-    }
-    
-    .toggle {
-      margin: 0.5vw;
-      padding: 1vw;
-      font-size: 2vw;
-    }
+	.txt-img {
+		margin-right: 1em;
+		height: 25vw;
+		width:  25vw;
+	}
+
+	.genre {
+		font-size: 4vw;
+	}
+	
+	.toggle {
+		margin: 0.5vw;
+		padding: 1vw;
+		font-size: 2vw;
+	}
 }

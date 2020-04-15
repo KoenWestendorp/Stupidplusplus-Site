@@ -11,7 +11,7 @@
 </head>
 
 <body onload="showImage(0)">
-	<header>
+	<header class="wrapper">
 		<ul>
 			<li><a href="index.html">Stupid++</a></li>
 			<li onclick="toggleDropdown()" class="dropdown">
@@ -26,8 +26,12 @@
 
 
 
-	<div class="main-grid-container">
-		<div class="pictureframe">
+	<div class="main-grid-container ">
+		<!-- was main-grid-container -->
+
+		<div class="pictureframe"> 
+			<!-- was pictureframe -->
+
 			<img src="images/me.png" class="slide"> 
 			<img src="images/programming.png" class="slide">
 			<img src="images/gamedev.gif" class="slide">
@@ -35,23 +39,31 @@
 			<img src="images/more.gif" class="slide">
 			<h1>Hey I'm Pelle</h1>
 		</div>
-		<div class="text-container">
-			I do cool things like 
-			<span class="highlight" onclick="showImage(1)" href="javascript:void(0)">Programming</span>,
-			<span class="highlight" onclick="showImage(2)" href="javascript:void(0)">Game development</span>,
-			<span class="highlight" onclick="showImage(3)">Sound design</span> and
-			<span class="highlight" onclick="showImage(4)">More</span>.
-			This website is a storage for all things cool I do. 
+
+
+		<div class="text-container container">
+			<!-- was text-container -->
+
+			<p>
+				I do cool things like 
+				<span class="highlight" onclick="showImage(1)" href="javascript:void(0)">Programming</span>,
+				<span class="highlight" onclick="showImage(2)" href="javascript:void(0)">Game development</span>,
+				<span class="highlight" onclick="showImage(3)">Sound design</span> and
+				<span class="highlight" onclick="showImage(4)">More</span>.
+				This website is a storage place for all cool things I do. 
+			</p>
 		</div>
+
 		<footer class="gridfooter">
 			<span class="highlight">Looking for a coder?</span>
 			<p>
 				<a href="tel:+31644355294">+31 6 44354294</a><br>
 				<a href="mailto:stupidplusplus&#64;gmail.com?subject=Hey Pelle!&body=Let's talk :)">stupidplusplus&#64;gmail.com</a><br>
 				<a href="https://instagram.com/stupidplusplus">@stupidplusplus</a> on Instagram<br>
+				<a href="https://github.com/Succyboi">Succyboi</a> on GitHub<br>
 				Based in Groningen, the Netherlands
 			</p>
-		</footer>  
+		</footer>
 	</div>
 </body>
 </html>

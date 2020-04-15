@@ -1,114 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Stupid++</title>
-    <link rel="icon" href="images/icon.png">
+<head>
+	<meta charset="UTF-8" />
+	<title>Stupid++</title>
+	<link rel="icon" href="images/icon.png">
 
-    <link rel="stylesheet" href="css/main.css">
-    <script src="scripts/main.js"></script>
-    <script src="scripts/gamedev.js"></script>
-    <script src="scripts/gamedev.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="scripts/main.js"></script>
+	<script src="scripts/gamedev.js"></script>
+	<script src="scripts/gamedev.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
 
-  </head>
+</head>
 
-    <body onload="assignNewGenres()">
-        <ul>
-            <li><a href="index.html">Stupid++</a></li>
-            <li onclick="toggleDropdown()" class="dropdown">
-              <a id="dropButton" href="javascript:void(0)" class="dropbtn">▼</a>
-            </li>
-          </ul>
-          <div id="mainDropdown" class="dropdown-content">
-            <a href="portfolio.html">- Portfolio</a>
-            <a href="gamedev.html">- Gamedev Tools</a>
-          </div>
+<body onload="assignNewGenres()">
+	<header>
+		<ul>
+			<li><a href="index.html">Stupid++</a></li>
+			<li onclick="toggleDropdown()" class="dropdown">
+				<a id="dropButton" href="javascript:void(0)" class="dropbtn">▼</a>
+			</li>
+		</ul>
+		<div id="mainDropdown" class="dropdown-content">
+			<a href="portfolio.html">- Portfolio</a>
+			<a href="gamedev.html">- Gamedev Tools</a>
+		</div>
+	</header>
 
-          <div class="container" onclick="assignNewGenres()">
-            <div class="content">
-              <h2 class="centertext">Game Idea Generator</h2>
-              <p id="status"><span class="highlight">Click Here</span> or press your spacebar to generate new game ideas!</p>
-            </div>
-          </div>
+	<div class="container" onclick="assignNewGenres()">
+		<div class="content">
+			<h2 class="centertext">Game Idea Generator</h2>
+			<p id="status"><span class="highlight">Click Here</span> or press your spacebar to generate new game ideas!</p>
+		</div>
+	</div>
 
-          <div class="generator" id="generator">
-            <div class="genre-container">
-              <div class="content">
-                <div class="toggle off" onclick="toggleButton(0)"> 🔓 </div>
-                <p class="genre"></p>
-              </div>
-            </div>
+	<div class="generator" id="generator">
+		<div class="genre-container">
+			<div class="content">
+				<div class="toggle off" onclick="toggleButton(0)"> 🔓 </div>
+				<p class="genre"></p>
+			</div>
+		</div>
 
-                        
-            <div class="genre-container">
-              <div class="content">
-                <div class="toggle off" onclick="toggleButton(1)"> 🔓 </div>
-                <p class="genre"></p>
-              </div>
-            </div>
 
-                        
-            <div class="genre-container">
-              <div class="content">
-                <div class="toggle off" onclick="toggleButton(2)"> 🔓 </div>
-                <p class="genre"></p>
-              </div>
-            </div>
+		<div class="genre-container">
+			<div class="content">
+				<div class="toggle off" onclick="toggleButton(1)"> 🔓 </div>
+				<p class="genre"></p>
+			</div>
+		</div>
 
-                        
-            <div class="genre-container">
-              <div class="content">
-                <div class="toggle off" onclick="toggleButton(3)"> 🔓 </div>
-                <p class="genre"></p>
-              </div>
-            </div>
 
-            <div class="genre-container">
-              <div class="content">
-                <p class="genre">Game</p>
-              </div>
-            </div>
+		<div class="genre-container">
+			<div class="content">
+				<div class="toggle off" onclick="toggleButton(2)"> 🔓 </div>
+				<p class="genre"></p>
+			</div>
+		</div>
 
-            <div class="container">
-              <div class="content games">
-                <span id="mashup-start">So a combination between </span> 
-                <a target="_blank" href="" class="gamelink"><span class="highlight game"></span></a>, 
-                <a target="_blank" href="" class="gamelink"><span class="highlight game"></span></a>, 
-                <a target="_blank" href="" class="gamelink"><span class="highlight game"></span></a> and 
-                <a target="_blank" href="" class="gamelink"><span class="highlight game"></span></a>
-                <span id="mashup-end">.</span>.
-              </div>
-            </div>
-  
-            <div class="container">
-              <div class="content">
-                This random game idea generator is based on the <a href="https://rawg.io/" target="_blank"><span class="highlight">RAWG Video Games Database API</span></a>.
-                It combines random game tags into revolutionary new game ideas!
-              </div>
-            </div>
-          </div>
 
-        <div class="spacing">
-          <div class="container">
-            <div class="content">
-              <h2 class="centertext">StupidTools for Unity</h2>
-              <img src="images/stupid.gif" class="txt-img">
-              StupidTools is a free collection of Unity Editor tools meant to aid your development in Unity3D, Right now this collection includes: 
-              A postits/scrum board, 
-              scene playback speed controls and
-              an fps tracker.<br>
-              Download StupidTools for Unity <a href="https://github.com/Succyboi/StupidTools" target="_blank"><span class="highlight">here</span></a>.
-            </div>
-          </div>
-        </div>
+		<div class="genre-container">
+			<div class="content">
+				<div class="toggle off" onclick="toggleButton(3)"> 🔓 </div>
+				<p class="genre"></p>
+			</div>
+		</div>
 
-            <div class="gridfooter">
-                    <span class="highlight">Looking for a coder?:</span><br>
-                    +31 0644354294<br>
-                    stupidplusplus@gmail.com<br>
-                    @stupidplusplus on Instagram<br>
-                    Based in Groningen, the Netherlands
-            </div>  
-    </body>
+		<div class="genre-container">
+			<div class="content">
+				<p class="genre">Game</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="content games">
+				<span id="mashup-start">So a combination between </span> 
+				<a target="_blank" href="" class="gamelink"><span class="highlight game"></span></a>, 
+				<a target="_blank" href="" class="gamelink"><span class="highlight game"></span></a>, 
+				<a target="_blank" href="" class="gamelink"><span class="highlight game"></span></a> and 
+				<a target="_blank" href="" class="gamelink"><span class="highlight game"></span></a>
+				<span id="mashup-end">.</span>.
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="content">
+				This random game idea generator is based on the <a href="https://rawg.io/" target="_blank"><span class="highlight">RAWG Video Games Database API</span></a>.
+				It combines random game tags into revolutionary new game ideas!
+			</div>
+		</div>
+	</div>
+
+	<div class="spacing">
+		<div class="container">
+			<div class="content">
+				<h2 class="centertext">StupidTools for Unity</h2>
+				<img src="images/stupid.gif" class="txt-img">
+				StupidTools is a free collection of Unity Editor tools meant to aid your development in Unity3D, Right now this collection includes: 
+				A postits/scrum board, 
+				scene playback speed controls and
+				an fps tracker.<br>
+				Download StupidTools for Unity <a href="https://github.com/Succyboi/StupidTools" target="_blank"><span class="highlight">here</span></a>.
+			</div>
+		</div>
+	</div>
+
+	<footer class="gridfooter">
+		<span class="highlight">Looking for a coder?</span>
+		<p>
+			<a href="tel:+31644355294">+31 6 44354294</a><br>
+			<a href="mailto:stupidplusplus&#64;gmail.com?subject=Hey Pelle!&body=Let's talk :)">stupidplusplus&#64;gmail.com</a><br>
+			<a href="https://instagram.com/stupidplusplus">@stupidplusplus</a> on Instagram<br>
+			<a href="https://github.com/Succyboi">Succyboi</a> on GitHub<br>
+			Based in Groningen, the Netherlands
+		</p>
+	</footer> 
+</body>
 </html>
